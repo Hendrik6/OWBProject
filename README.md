@@ -1,6 +1,6 @@
 # OWBProject
 
-This repo contains the project that needs to be delivered by the end of august
+This repo contains the project that needs to be delivered by August 28, 2020
 
 First init.
 We need to have the ability to add pictures as NFT's (see line 102 in NonFungibleToken.cdc)

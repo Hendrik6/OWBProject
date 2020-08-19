@@ -22,7 +22,7 @@ pub contract ApprovalVoting {
             self.proposals = ApprovalVoting.proposals
             self.choices = {}
             
-            // PictureCollection each choice to false
+            // Set each choice to false
             var i = 0
             while i < self.proposals.length {
                 self.choices[i] = false
@@ -53,7 +53,7 @@ pub contract ApprovalVoting {
             }
             ApprovalVoting.proposals = proposals
 
-            // PictureCollection each tally of votes to zero
+            // Set each tally of votes to zero
             var i = 0
             while i < proposals.length {
                 ApprovalVoting.votes[i] = 0

@@ -39,7 +39,7 @@
 */
 
 import NonFungibleToken from 0x01cf0e2f2f715450
-pub contract PictureApp: NonFungibleToken {
+pub contract PictureApp {
 
     // -----------------------------------------------------------------------
     // PictureApp contract Events
@@ -374,7 +374,7 @@ pub contract PictureApp: NonFungibleToken {
 
     // The resource that represents the Moment NFTs
     //
-    pub resource NFT: NonFungibleToken.INFT {
+    pub resource NFT {
 
         // Global unique moment ID
         pub let id: UInt64
@@ -479,7 +479,7 @@ pub contract PictureApp: NonFungibleToken {
     // Collection is a resource that every user who owns NFTs 
     // will store in their account to manage their NFTS
     
-    pub resource Collection: PictureNFTCollectionPublic, NonFungibleToken.Provider, NonFungibleToken.Receiver { 
+    pub resource Collection { 
         // Dictionary of Moment conforming tokens
         // NFT is a resource type with a UInt64 ID field
         pub var ownedNFTs: @{UInt64: PictureApp.NFT}

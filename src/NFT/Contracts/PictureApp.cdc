@@ -101,7 +101,7 @@ pub contract PictureApp {
     pub var nextPictureCollectionID: UInt32
 
 
-    // The total number of Top shot Moment NFTs that have been created
+    // The total number of Photo Moment NFTs that have been created
     // Because NFTs can be destroyed, it doesn't necessarily mean that this
     // reflects the total number of NFTs in existence, just the number that
     // have been minted to date. Also used as global moment IDs for minting.

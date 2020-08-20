@@ -404,11 +404,11 @@ pub contract PictureApp {
         // createPlay creates a new Picture struct 
         // and stores it in the Pictures dictionary in the Picture smart contract
         //
-        // Parameters: metadata: A dictionary mapping metadata titles to their data
-        //                       example: {"Player Name": "Kevin Durant", "Height": "7 feet"}
-        //                               (because we all know Kevin Durant is not 6'9")
+        // Parameters: metadata: A profile view of the Photo
+        //                       example: {"John", "Christmas Tree", "2017"}
+        //                               (remember the year John tripped over the Christmas lights, haha)
         //
-        // Returns: the ID of the new Picture object
+        // Returns: the ID of the new Picture object 
         //
         pub fun createPlay(metadata: {String: String}): UInt32 {
             // Create the new Picture

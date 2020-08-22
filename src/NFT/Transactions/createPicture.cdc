@@ -1,6 +1,6 @@
 import PictureApp from 0x01cf0e2f2f715450
-// This transaction creates a new play struct 
-// and stores it in the Top Shot smart contract
+// This transaction creates a new picture struct 
+// and stores it in the PictureApp smart contract
 // We currently stringify the metadata and instert it into the 
 // transaction string, but want to use transaction arguments soon
 

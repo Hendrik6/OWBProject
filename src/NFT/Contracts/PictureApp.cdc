@@ -38,7 +38,7 @@
 
 */
 
-import NonFungibleToken from 0x01cf0e2f2f715450
+import NonFungibleToken from 0x179b6b1cb6755e31
 pub contract PictureApp {
 
     // -----------------------------------------------------------------------
@@ -410,16 +410,19 @@ pub contract PictureApp {
         //
         // Returns: the ID of the new Picture object 
         //
-        pub fun createPlay(metadata: {String: String}): UInt32 {
+        pub fun createPicture(metadata: {String: String}): UInt32 {
             // Create the new Picture
-            var newPlay = Picture(metadata: metadata)
-            let newID = newPlay.pictureID
+            var newPicture = Picture(metadata: metadata)
+            let newID = newPicture.pictureID
 
             // Store it in the contract storage
-            PictureApp.pictureDatas[newID] = newPlay
+            PictureApp.pictureDatas[newID] = newPicture
 
             return newID
         }
+
+
+
 
         // createPictureCollection creates a new PictureCollection resource and stores it
         // in the sets mapping in the Picture contract
@@ -620,32 +623,6 @@ pub contract PictureApp {
         return PictureApp.pictureDatas.values
     }
 
-    // getPlayMetaData returns all the metadata associated with a specific Picture
-    // 
-    // Parameters: pictureID: The id of the Picture that is being searched
-    //
-    // Returns: The metadata as a String to String mapping optional
-    pub fun getPlayMetaData(pictureID: UInt32): {String: String}? {
-        return self.pictureDatas[pictureID]?.metadata
-    }
-
-    // getPlayMetaDataByField returns the metadata associated with a 
-    //                        specific field of the metadata
-    //                        Ex: field: "Team" will return something
-    //                        like "Memphis Grizzlies"
-    // 
-    // Parameters: pictureID: The id of the Picture that is being searched
-    //             field: The field to search for
-    //
-    // Returns: The metadata field as a String Optional
-    pub fun getPlayMetaDataByField(pictureID: UInt32, field: String): String? {
-        // Don't force a revert if the pictureID or field is invalid
-        if let Picture = PictureApp.pictureDatas[pictureID] {
-            return Picture.metadata[field]
-        } else {
-            return nil
-        }
-    }
 
     // getPictureCollectionName returns the name that the specified PictureCollection
     //            is associated with.
@@ -699,8 +676,11 @@ pub contract PictureApp {
         self.nextPictureCollectionID = 1
         self.totalSupply = 0
 
+        // Create a single new NFT and save it to account storage
+        self.account.save<@NFT>(<-create NFT(serialNumber: 1,pictureID: 23,setID:561), to: /storage/PictureAdmin)
+    
         // Put a new Collection in storage
-        self.account.save<@Collection>(<- create Collection(), to: /storage/MomentCollection)
+        self.account.save<@Collection>(<- create Collection(), to: /storage/PictureCollection)
 
         // Create a public capability for the Collection
         self.account.link<&{PictureNFTCollectionPublic}>(/public/MomentCollection, target: /storage/MomentCollection)
@@ -709,6 +689,9 @@ pub contract PictureApp {
         self.account.save<@Admin>(<- create Admin(), to: /storage/PictureAdmin)
 
         emit ContractInitialized()
+
+
     }
 }
+ 
  

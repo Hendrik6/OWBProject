@@ -1,15 +1,23 @@
 pub contract NonFungibleToken {
 
-  // Declare the NFT resource type
-  pub resource NFT {
-      // The unique ID that differentiates each NFT
-      pub let id: UInt64
 
-      // Initialize both fields in the init function
-      init(initID: UInt64) {
-          self.id = initID
-      }
-  }
+    // Declare the NFT resource type
+    pub resource NFT {
+        // The unique ID that differentiates each NFT
+        pub let id: UInt64
+
+        // String mapping to hold metadata
+        pub var metadata: {String: String}
+
+        // Initialize both fields in the init function
+        init(initID: UInt64) {
+            self.id = initID
+            self.metadata = {}
+        }
+    }
+
+
+
 
   // We define this interface purely as a way to allow users
   // to create public, restricted references to their NFT Collection.
@@ -195,6 +203,10 @@ pub contract NonFungibleToken {
 
     // store a minter resource in account storage
     self.account.save<@NFTMinter>(<-create NFTMinter(), to: /storage/NFTMinter)
+
+        // Create a single new NFT and save it to account storage
+		self.account.save<@NFT>(<-create NFT(initID: 1), to: /storage/NFT1)
+	
   }
 }
  

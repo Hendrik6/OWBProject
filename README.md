@@ -2,6 +2,26 @@
 
 This repo contains Open World Builders project to be delivered on August 28, 2020 by group #20 Jared, JeanClaudel, Hendrik
 
+TODO per submission....
+
+
+    Clone this repo into your local environment
+
+    Create a subfolder in this repo named with your team ID number, i.e. OWBSummer2020Project/15 where 15 is your team number
+
+    Inside your team folder you can structure it based on your project setup
+
+    Make sure to include a README file containainig all info below
+        A quick summary overview of your project (few sentences at max)
+        Link to your recorded presentation on Youtube (you can leave it unlisted if preferred)
+        Link to the Google Slides presentation (has to be publicly viewable)
+        Detailed review of what your project is trying to tackle and how it works (add link to working demo / webiste if available)
+        Mention about current limitations and potential future additions to improve it
+
+For a chance to have your recorded presentation and submission reviewed by Flow team and professional investors for feedback please submit your Capstone project by end of week 8, Friday, Aug 28th.
+
+*Please ensure that each material link is publicly accessible and completed in advance of the respective final deadline that you decide to submit for.
+------------------------------------------------------------------------------------------------------------------------------------------------------
 Use case
 
 What is different about the Family Tree Photo (NiFTree) sharing decentralized application, is the unique value of the assets. Everyone has an identity in life, everyone is a unique individual.  A Photo turned NFT to represent, reaffirm, and foster this concept of value is gratifying, fun, and establishes an inherent concept that others are unique individuals as well. A photo, minted into a NFT(s) of individuals has value, and after entering NiFTree, has scarcity!

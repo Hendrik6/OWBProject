@@ -28,10 +28,10 @@ Everyone has an identity in life, everyone is a unique individual.  A Photo turn
 The Family Tree Photo concept is a beginning, a baby step towards a larger, much larger plan of inclusion.  Friends, large groups of friends, organizations, clubs, sport clubs and so many others can get in on the action as well!
 
 Link to recorded presentation on Youtube:
-
+https://youtu.be/8EMjNsZjlKo
 
 Link to Google Slides presentation (Public):
-
+https://docs.google.com/presentation/d/1_uZHEz2w2oEb2xmsR_WvHk7nTEpayRAXm8VWkMNoUhU/edit#slide=id.g4c68a97855_0_33
 
 Use case/Summary Overview
 
